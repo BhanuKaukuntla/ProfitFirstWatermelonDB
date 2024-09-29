@@ -1,10 +1,11 @@
-import { View, Text, StyleSheet, Button, TextInput } from 'react-native';
-import { useState } from 'react';
+import { View, Text, StyleSheet, Button, TextInput } from "react-native";
+import { useState } from "react";
+import AccountsList from "../../components/AccountsList";
 
 export default function AccountsScreen() {
-  const [name, setName] = useState('');
-  const [cap, setCap] = useState('');
-  const [tap, setTap] = useState('');
+  const [name, setName] = useState("");
+  const [cap, setCap] = useState("");
+  const [tap, setTap] = useState("");
 
   return (
     <View style={{ gap: 5, padding: 5 }}>
@@ -13,6 +14,7 @@ export default function AccountsScreen() {
         <Text>CAP</Text>
         <Text>TAP</Text>
       </View>
+      <AccountsList />
 
       <View style={styles.inputRow}>
         <TextInput
@@ -42,15 +44,15 @@ export default function AccountsScreen() {
 
 const styles = StyleSheet.create({
   header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     padding: 10,
   },
   inputRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: "white",
   },
   input: {
     flex: 1,
